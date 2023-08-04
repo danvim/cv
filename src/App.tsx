@@ -1,22 +1,174 @@
 import { A4 } from "./components/A4";
 import { Heading } from "./components/Heading";
 import { Box } from "./components/Box";
-import { Text } from "./components/Text";
+import { Desc, Text } from "./components/Text";
 import { Section } from "./components/Section";
 import { Entry } from "./components/Entry";
-import { Tag } from "./components/Tag";
-import { FC } from "react";
+import {
+  Label,
+  Legend,
+  LesserTag,
+  NiceTag,
+  PerfectTag,
+  Tag,
+} from "./components/Tag";
+import React, { FC } from "react";
+import { LI, UL } from "./components/LI";
+import identityImg from "./identity.png";
+import { Logo } from "./components/Logo";
 
 const App: FC = () => (
   <A4>
     <Box column centerItems style={{ marginBottom: 20 }}>
-      <Heading>CHEUNG Daniel</Heading>
+      <Heading>Daniel Cheung</Heading>
       <Box gap={32}>
         <Text size={16} color="#666">
           dcheungaa@connect.ust.hk
         </Text>
       </Box>
     </Box>
+
+    <Section title="Experiences">
+      <UL>
+        <LI>
+          <Box column>
+            <Entry dated="2022–">
+              <Text>
+                <strong>Credit Suisse</strong> Full-stack engineer (Wealth
+                Management Technology)
+              </Text>
+            </Entry>
+            <Box gap={5}>
+              <PerfectTag>React</PerfectTag>
+              <PerfectTag>TypeScript</PerfectTag>
+              <PerfectTag>Node.js</PerfectTag>
+              <PerfectTag>Design tokens</PerfectTag>
+              <Tag>MongoDB</Tag>
+              <Tag>Figma</Tag>
+              <Tag>Docker</Tag>
+              <Tag>Playwright</Tag>
+            </Box>
+            <Desc>
+              Working under Wealth Management Technology. Developing a web
+              platform using React, Node.js, and TypeScript. Maintaining a React
+              UI component library and developing a design tokens library.
+            </Desc>
+          </Box>
+        </LI>
+        <LI>
+          <Box column>
+            <Entry dated="2020–2022">
+              <Text>
+                <strong>Credit Suisse</strong> Technology analyst
+              </Text>
+            </Entry>
+            <Box gap={5}>
+              <PerfectTag>React</PerfectTag>
+              <PerfectTag>TypeScript</PerfectTag>
+              <PerfectTag>Node.js</PerfectTag>
+              <NiceTag>Vite</NiceTag>
+              <Tag>Java/Kotlin</Tag>
+              <Tag>Figma</Tag>
+              <Tag>Docker</Tag>
+            </Box>
+            <Desc>
+              4 rotations under teams in different business areas (Wealth
+              Management, Investment Banking, Risk) learning and developing
+              software solution to support the business.
+            </Desc>
+          </Box>
+        </LI>
+        <LI>
+          <Box column>
+            <Entry dated="2020">
+              <Text>
+                <strong>Best Final Year Project</strong> ZINC - Automatic
+                grading platform
+              </Text>
+            </Entry>
+            <Box gap={5}>
+              <NiceTag>PHP (Laravel)</NiceTag>
+              <NiceTag>Next.js</NiceTag>
+              <NiceTag>PostgresQL</NiceTag>
+              <Tag>Redis</Tag>
+              <Tag>Kotlin</Tag>
+              <Tag>Docker</Tag>
+            </Box>
+            <Desc>
+              Platform designed to collect and automatically process programming
+              submissions. System is now adopted at HKUST.
+            </Desc>
+          </Box>
+        </LI>
+        <LI>
+          <Entry dated="2019">
+            <Box column>
+              <Text>
+                <strong>Internship at PopTicket</strong> Software Engineer
+              </Text>
+              <Box gap={5}>
+                <PerfectTag>React</PerfectTag>
+                <PerfectTag>jQuery</PerfectTag>
+                <NiceTag>PHP (Laravel)</NiceTag>
+                <Tag>Docker</Tag>
+                <LesserTag>Adobe XD</LesserTag>
+              </Box>
+            </Box>
+          </Entry>
+        </LI>
+        <LI>
+          <Entry dated="2016-2018">
+            <Box column>
+              <Text>
+                <strong>HKUST Robotics Team</strong> Software Engineer
+              </Text>
+              <Box gap={5}>
+                <NiceTag>Fusion 360 (CAD)</NiceTag>
+                <LesserTag>C++ Embedded</LesserTag>
+              </Box>
+            </Box>
+          </Entry>
+        </LI>
+      </UL>
+    </Section>
+
+    <Section title="Other skills">
+      <UL>
+        <LI>
+          <strong>Technology</strong>
+          <Box gap={5}>
+            <Tag>Blender (3D modeling)</Tag>
+            <LesserTag>Adobe Illustrator</LesserTag>
+          </Box>
+        </LI>
+        <LI>
+          <Box column>
+            <strong>Languages</strong>
+            <Text>
+              <Box gap={5}>
+                <PerfectTag>Cantonese</PerfectTag>
+                <PerfectTag>English</PerfectTag>
+                <Tag>Mandarin</Tag>
+              </Box>
+            </Text>
+          </Box>
+        </LI>
+      </UL>
+
+      <Box
+        column
+        style={{ alignItems: "end", justifyContent: "end", marginTop: "-2em" }}
+      >
+        <Label>🡒 fluency</Label>
+        <Box centerItems gap={5}>
+          <Legend $styleName="lesserStyle" />
+          <Legend $styleName="normalStyle" />
+          <Legend $styleName="niceStyle" />
+          <Legend $styleName="perfectStyle" />
+        </Box>
+      </Box>
+    </Section>
+
     <Section title="Education">
       <Entry dated="2016-2020">
         <Box column>
@@ -27,179 +179,27 @@ const App: FC = () => (
           <Text color="#666">Minor in Robotics</Text>
         </Box>
       </Entry>
-      <Entry dated="2012–2016">
-        <strong>Newman Catholic College</strong> (Form 3–6)
-      </Entry>
-    </Section>
-    <Section title="Skills">
-      <ul>
-        <li>
-          <Box column>
-            <strong>Computer languages</strong>
-            <Text color="#666">
-              <Box centerItems gap={5}>
-                Fluent
-                <Box gap={5}>
-                  <Tag>HTML5</Tag>
-                  <Tag>JavaScript/TypeScript</Tag>
-                  <Tag>React</Tag>
-                  <Tag>Vue</Tag>
-                  <Tag>jQuery</Tag>
-                  <Tag>CSS (SASS)</Tag>
-                  <Tag>PHP (Laravel)</Tag>
-                </Box>
-              </Box>
-            </Text>
-            <Text color="#666">
-              <Box centerItems gap={32}>
-                <Box centerItems gap={5}>
-                  Proficient
-                  <Box gap={5}>
-                    <Tag>Java/Kotlin</Tag>
-                    <Tag>SQL</Tag>
-                    <Tag>C++</Tag>
-                  </Box>
-                </Box>
-                <Box gap={5}>
-                  Adequate
-                  <Box gap={5}>
-                    <Tag>Embedded Programming</Tag>
-                    <Tag>Redis/MongoDB</Tag>
-                    <Tag>Docker</Tag>
-                  </Box>
-                </Box>
-              </Box>
-            </Text>
-          </Box>
-        </li>
-        <li>
-          <strong>Design</strong>{" "}
-          <span>Familiar with Adobe Photoshop and Adobe Illustrator </span>
-        </li>
-        <li>
-          <Box gap={16}>
-            <strong>Blender (3D modeling)</strong>
-            <strong>Fusion 360 (CAD)</strong>
-          </Box>
-        </li>
-      </ul>
     </Section>
 
-    <Section title="Qualifications">
-      <Entry dated="2016">
-        <strong>HKDSE</strong>
-      </Entry>
-      <Entry dated="2016">
-        <strong>IELTS (8)</strong>
-      </Entry>
-    </Section>
-
-    <Section title="Awards & Experiences">
-      <ul>
-        <li>
-          <Entry dated="2020–2022">
-            <strong>Credit Suisse</strong> Technical Analyst Program
-          </Entry>
-        </li>
-        <li>
-          <Entry dated="2020">
-            <strong>Best Final Year Project</strong> Best FYP Video
-          </Entry>
-        </li>
-        <li>
-          <Entry dated="2019">
-            <strong>Internship at PopTicket</strong> Software Engineer
-          </Entry>
-        </li>
-        <li>
-          <Entry dated="2018, 2019, 2020">
-            <strong>HKUST School of Engineering Dean’s List</strong>
-          </Entry>
-        </li>
-        <li>
-          <Entry dated="2018, 2019">
-            <strong>
-              HKSAR Government Scholarship Fund–Talent Development Scholarship
-            </strong>
-          </Entry>
-        </li>
-        <li>
-          <Entry dated="2018">
-            <strong>
-              HKUST Robotics Team–Recruitment/Robot Design Contest Committee
-            </strong>{" "}
-            Gamemaster
-          </Entry>
-        </li>
-        <li>
-          <Entry dated="2017">
-            <Box column>
-              <Text>
-                <strong>HKUST Robotics Team–Intelligent Racing sub team</strong>{" "}
-                Software Engineer
-              </Text>
-              <Text color="#666">
-                First Class Award in Chinese Regional NXP Cup–Photoelectric
-                Four-Wheel subgroup
-              </Text>
-            </Box>
-          </Entry>
-        </li>
-        <li>
-          <Entry dated="2016–2017">
-            <Box column>
-              <Text>
-                <strong>HKUST Robotics Team–ROV sub team</strong> Software
-                Engineer
-              </Text>
-              <Text color="#666">
-                All-Rounded Champion in MATE International with Robot Beluga of
-                Epoxsea Team
-              </Text>
-            </Box>
-          </Entry>
-        </li>
-      </ul>
-    </Section>
-
-    <Section title="Interests & Profiles">
+    <Section title="Profiles">
       <div>
-        <strong style={{ width: 150, display: "inline-block" }}>
-          Languages
+        <strong style={{ width: 200, display: "inline-block" }}>
+          StackOverflow
         </strong>
-        <span>Fluent in Cantonese, English, and Mandarin</span>
+        <a href="https://stackoverflow.com/users/1993909/daniel-cheung">
+          https://stackoverflow.com/users/1993909/daniel-cheung
+        </a>
       </div>
       <div>
-        <strong style={{ width: 150, display: "inline-block" }}>
-          Programming
+        <strong style={{ width: 200, display: "inline-block" }}>
+          GitHub page ∙ profile
         </strong>
-        <div style={{ paddingLeft: 25 }}>
-          <div>
-            <strong style={{ width: 250, display: "inline-block" }}>
-              StackOverflow profile
-            </strong>
-            <a href="https://stackoverflow.com/users/1993909/daniel-cheung">
-              https://stackoverflow.com/users/1993909/daniel-cheung
-            </a>
-          </div>
-          <div>
-            <strong style={{ width: 250, display: "inline-block" }}>
-              GitHub personal page ∙ profile
-            </strong>
-            <a href="https://danvim.github.io">https://danvim.github.io</a>
-            {" ∙ "}
-            <a href="https://github.com/danvim/">https://github.com/danvim/</a>
-          </div>
-        </div>
+        <a href="https://danvim.github.io">https://danvim.github.io</a>
+        {" ∙ "}
+        <a href="https://github.com/danvim/">https://github.com/danvim/</a>
       </div>
       <div>
-        <strong style={{ width: 150, display: "inline-block" }}>
-          Other interests
-        </strong>
-        <span>Calligraphy, Science, Graphic Design, Drawing</span>
-      </div>
-      <div>
-        <strong style={{ width: 150, display: "inline-block" }}>
+        <strong style={{ width: 200, display: "inline-block" }}>
           LinkedIn
         </strong>
         <a href="https://www.linkedin.com/in/-daniel-cheung/">
@@ -207,6 +207,8 @@ const App: FC = () => (
         </a>
       </div>
     </Section>
+
+    <Logo src={identityImg} />
   </A4>
 );
 
