@@ -16,12 +16,22 @@ import React, { FC } from "react";
 import { LI, UL } from "./components/LI";
 import identityImg from "./identity.png";
 import { Logo } from "./components/Logo";
+import { GitHub } from "react-feather";
+
+const tel = import.meta.env.VITE_TEL;
+
+console.log(tel);
 
 const App: FC = () => (
   <A4>
     <Box column centerItems style={{ marginBottom: 20 }}>
       <Heading>Daniel Cheung</Heading>
       <Box gap={32}>
+        {typeof tel === "string" && tel !== "" ? (
+          <Text size={16} color="#666">
+            {tel}
+          </Text>
+        ) : null}
         <Text size={16} color="#666">
           dcheungaa@connect.ust.hk
         </Text>
@@ -45,13 +55,15 @@ const App: FC = () => (
               <PerfectTag>Design tokens</PerfectTag>
               <Tag>MongoDB</Tag>
               <Tag>Figma</Tag>
-              <Tag>Docker</Tag>
               <Tag>Playwright</Tag>
+              <Tag>Docker</Tag>
             </Box>
             <Desc>
-              Working under Wealth Management Technology. Developing a web
-              platform using React, Node.js, and TypeScript. Maintaining a React
-              UI component library and developing a design tokens library.
+              Developing a web platform using React, Node.js, and TypeScript.
+              Maintaining a React UI component library and kick-started a design
+              tokens library with design team. Using latest packages and
+              tooling, drastically optimized CI pipelines of multiple projects
+              across different teams.
             </Desc>
           </Box>
         </LI>
@@ -111,7 +123,6 @@ const App: FC = () => (
                 <PerfectTag>jQuery</PerfectTag>
                 <NiceTag>PHP (Laravel)</NiceTag>
                 <Tag>Docker</Tag>
-                <LesserTag>Adobe XD</LesserTag>
               </Box>
             </Box>
           </Entry>
@@ -120,10 +131,12 @@ const App: FC = () => (
           <Entry dated="2016-2018">
             <Box column>
               <Text>
-                <strong>HKUST Robotics Team</strong> Software Engineer
+                <strong>HKUST Robotics Team</strong> Software Engineer & Game
+                Master
               </Text>
               <Box gap={5}>
                 <NiceTag>Fusion 360 (CAD)</NiceTag>
+                <NiceTag>PHP (Laravel)</NiceTag>
                 <LesserTag>C++ Embedded</LesserTag>
               </Box>
             </Box>
@@ -132,15 +145,41 @@ const App: FC = () => (
       </UL>
     </Section>
 
-    <Section title="Other skills">
+    <Section title="Side projects">
       <UL>
         <LI>
-          <strong>Technology</strong>
-          <Box gap={5}>
-            <Tag>Blender (3D modeling)</Tag>
-            <LesserTag>Adobe Illustrator</LesserTag>
+          <Box column>
+            <Entry dated="2020-2022">
+              <Text>
+                <strong>Photosynthesis</strong>, a web-base 3D P2P board game
+                clone
+              </Text>
+            </Entry>
+            <Box gap={5}>
+              <PerfectTag>React</PerfectTag>
+              <PerfectTag>TypeScript</PerfectTag>
+              <NiceTag>ECS</NiceTag>
+              <Tag>Three.js</Tag>
+              <Tag>Peer.js</Tag>
+              <Tag>WebRTC</Tag>
+              <Tag>Blender (3D modeling)</Tag>
+            </Box>
+            <Desc>
+              Fun project coded with a friend, where I provided 3D assets
+              modeled and textured in Blender, and staged in Three.js using the
+              ECS pattern and React.{" "}
+              <a href="https://github.com/dipsywong98/photosynthesis">
+                <GitHub size="1em" style={{ verticalAlign: "text-bottom" }} />{" "}
+                dipsywong98/photosynthesis
+              </a>
+            </Desc>
           </Box>
         </LI>
+      </UL>
+    </Section>
+
+    <Section title="Other skills">
+      <UL>
         <LI>
           <Box column>
             <strong>Languages</strong>
