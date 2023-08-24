@@ -33,7 +33,7 @@ const App: FC = () => (
           </Text>
         ) : null}
         <Text size={16} color="#666">
-          dcheungaa@connect.ust.hk
+          dcheungaa<span className="obfuscation">@</span>connect.ust.hk
         </Text>
       </Box>
     </Box>
