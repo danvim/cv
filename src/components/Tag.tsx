@@ -65,6 +65,7 @@ const TagBase = styled.div`
   display: inline-block;
   border-radius: 1em;
   font-size: 0.75em;
+  line-height: 1.5em;
   padding: calc(2px - var(--border-width)) calc(8px - var(--border-width));
 `;
 
