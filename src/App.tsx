@@ -4,14 +4,7 @@ import { Box } from "./components/Box";
 import { Desc, Text } from "./components/Text";
 import { Section } from "./components/Section";
 import { Entry } from "./components/Entry";
-import {
-  Label,
-  Legend,
-  LesserTag,
-  NiceTag,
-  PerfectTag,
-  Tag,
-} from "./components/Tag";
+import { Label, Legend, NiceTag, PerfectTag, Tag } from "./components/Tag";
 import React, { FC } from "react";
 import { LI, UL } from "./components/LI";
 import identityImg from "./identity.png";
@@ -19,8 +12,6 @@ import { Logo } from "./components/Logo";
 import { GitHub } from "react-feather";
 
 const tel = import.meta.env.VITE_TEL;
-
-console.log(tel);
 
 const App: FC = () => (
   <A4>
@@ -42,9 +33,9 @@ const App: FC = () => (
       <UL>
         <LI>
           <Box column>
-            <Entry dated="2022–">
+            <Entry dated="2020–">
               <Text>
-                <strong>Credit Suisse</strong> Full-stack engineer (Wealth
+                <strong>Credit Suisse</strong> Associate Director (Wealth
                 Management Technology)
               </Text>
             </Entry>
@@ -53,40 +44,27 @@ const App: FC = () => (
               <PerfectTag>TypeScript</PerfectTag>
               <PerfectTag>Node.js</PerfectTag>
               <PerfectTag>Design tokens</PerfectTag>
+              <NiceTag>Vite</NiceTag>
+              <Tag>Java/Kotlin</Tag>
               <Tag>MongoDB</Tag>
               <Tag>Figma</Tag>
               <Tag>Playwright</Tag>
               <Tag>Docker</Tag>
             </Box>
             <Desc>
-              Developing a web platform using React, Node.js, and TypeScript.
-              Maintaining a React UI component library and kick-started a design
-              tokens library with design team. Using latest packages and
-              tooling, drastically optimized CI pipelines of multiple projects
-              across different teams.
-            </Desc>
-          </Box>
-        </LI>
-        <LI>
-          <Box column>
-            <Entry dated="2020–2022">
-              <Text>
-                <strong>Credit Suisse</strong> Technology analyst
-              </Text>
-            </Entry>
-            <Box gap={5}>
-              <PerfectTag>React</PerfectTag>
-              <PerfectTag>TypeScript</PerfectTag>
-              <PerfectTag>Node.js</PerfectTag>
-              <NiceTag>Vite</NiceTag>
-              <Tag>Java/Kotlin</Tag>
-              <Tag>Figma</Tag>
-              <Tag>Docker</Tag>
-            </Box>
-            <Desc>
-              4 rotations under teams in different business areas (Wealth
-              Management, Investment Banking, Risk) learning and developing
-              software solution to support the business.
+              <p>
+                Full stack engineer developing a web platform using React,
+                Node.js, and TypeScript. Maintaining a React UI component
+                library and kick-started a design tokens library with design
+                team. Using latest packages and tooling, drastically optimized
+                CI pipelines of multiple projects across different teams.
+              </p>
+              <p>
+                During 2020–2022 as a Technology Analyst, I have done 4
+                rotations in teams under different business areas (Wealth
+                Management, Investment Banking, Risk) learning and developing
+                software solution to support the business.
+              </p>
             </Desc>
           </Box>
         </LI>
@@ -101,7 +79,7 @@ const App: FC = () => (
             <Box gap={5}>
               <NiceTag>PHP (Laravel)</NiceTag>
               <NiceTag>Next.js</NiceTag>
-              <NiceTag>PostgresQL</NiceTag>
+              <Tag>PostgresQL</Tag>
               <Tag>Redis</Tag>
               <Tag>Kotlin</Tag>
               <Tag>Docker</Tag>
@@ -127,26 +105,50 @@ const App: FC = () => (
             </Box>
           </Entry>
         </LI>
-        <LI>
-          <Entry dated="2016-2018">
-            <Box column>
-              <Text>
-                <strong>HKUST Robotics Team</strong> Software Engineer & Game
-                Master
-              </Text>
-              <Box gap={5}>
-                <NiceTag>Fusion 360 (CAD)</NiceTag>
-                <NiceTag>PHP (Laravel)</NiceTag>
-                <LesserTag>C++ Embedded</LesserTag>
-              </Box>
-            </Box>
-          </Entry>
-        </LI>
+        {/*<LI>*/}
+        {/*  <Entry dated="2016-2018">*/}
+        {/*    <Box column>*/}
+        {/*      <Text>*/}
+        {/*        <strong>HKUST Robotics Team</strong> Software Engineer & Game*/}
+        {/*        Master*/}
+        {/*      </Text>*/}
+        {/*      <Box gap={5}>*/}
+        {/*        <NiceTag>Fusion 360 (CAD)</NiceTag>*/}
+        {/*        <NiceTag>PHP (Laravel)</NiceTag>*/}
+        {/*        <LesserTag>C++ Embedded</LesserTag>*/}
+        {/*      </Box>*/}
+        {/*    </Box>*/}
+        {/*  </Entry>*/}
+        {/*</LI>*/}
       </UL>
     </Section>
 
     <Section title="Side projects">
       <UL>
+        <LI>
+          <Box column>
+            <Entry dated="2023">
+              <Text>
+                <strong>React pdfmake Reconciler</strong>, a React renderer for
+                pdfmake
+              </Text>
+            </Entry>
+            <Box gap={5}>
+              <PerfectTag>React</PerfectTag>
+              <PerfectTag>TypeScript</PerfectTag>
+              <NiceTag>pdfmake</NiceTag>
+            </Box>
+            <Desc>
+              A weekend project that solves a problem I encountered at work.
+              This package renders the React tree with custom intrinsic nodes
+              into the declarative object input for pdfmake.{" "}
+              <a href="https://github.com/danvim/react-pdfmake-reconciler">
+                <GitHub size="1em" style={{ verticalAlign: "text-bottom" }} />{" "}
+                danvim/react-pdfmake-reconciler
+              </a>
+            </Desc>
+          </Box>
+        </LI>
         <LI>
           <Box column>
             <Entry dated="2020-2022">

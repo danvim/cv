@@ -13,4 +13,14 @@ export const Text = styled.span<TextProps>`
 export const Desc = styled(Text)`
   font-size: 0.875em;
   color: ${(p) => p.color ?? "#16598a"};
+
+  > p {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 `;
