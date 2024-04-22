@@ -202,7 +202,7 @@ const App: FC = () => (
       >
         <Label>🡒 fluency</Label>
         <Box centerItems gap={5}>
-          <Legend $styleName="lesserStyle" />
+          {/*<Legend $styleName="lesserStyle" />*/}
           <Legend $styleName="normalStyle" />
           <Legend $styleName="niceStyle" />
           <Legend $styleName="perfectStyle" />
