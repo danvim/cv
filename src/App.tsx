@@ -35,8 +35,8 @@ const App: FC = () => (
           <Box column>
             <Entry dated="2020–">
               <Text>
-                <strong>Credit Suisse</strong> Associate Director (Wealth
-                Management Technology)
+                <strong>UBS</strong> Associate Director (Full stack developer,
+                Wealth Management)
               </Text>
             </Entry>
             <Box gap={5}>
@@ -45,9 +45,9 @@ const App: FC = () => (
               <PerfectTag>Node.js</PerfectTag>
               <PerfectTag>Design tokens</PerfectTag>
               <NiceTag>Vite</NiceTag>
+              <NiceTag>Figma</NiceTag>
               <Tag>Java/Kotlin</Tag>
               <Tag>MongoDB</Tag>
-              <Tag>Figma</Tag>
               <Tag>Playwright</Tag>
               <Tag>Docker</Tag>
             </Box>
@@ -56,14 +56,15 @@ const App: FC = () => (
                 Full stack engineer developing a web platform using React,
                 Node.js, and TypeScript. Maintaining a React UI component
                 library and kick-started a design tokens library with design
-                team. Using latest packages and tooling, drastically optimized
-                CI pipelines of multiple projects across different teams.
+                team to ease brand transition. Using latest packages and
+                tooling, drastically optimized CI pipelines of multiple projects
+                across different teams.
               </p>
               <p>
-                During 2020–2022 as a Technology Analyst, I have done 4
-                rotations in teams under different business areas (Wealth
+                During 2020–2022 as a Technology Analyst under Credit Suisse, I
+                was in 4 team rotations under different business areas (Wealth
                 Management, Investment Banking, Risk) learning and developing
-                software solution to support the business.
+                software solution to support business.
               </p>
             </Desc>
           </Box>
@@ -139,9 +140,9 @@ const App: FC = () => (
               <NiceTag>pdfmake</NiceTag>
             </Box>
             <Desc>
-              A weekend project that solves a problem I encountered at work.
-              This package renders the React tree with custom intrinsic nodes
-              into the declarative object input for pdfmake.{" "}
+              Started as a weekend project that solves a problem I encountered
+              at work. This package renders the React node tree with custom
+              intrinsic elements into the declarative object input for pdfmake.{" "}
               <a href="https://github.com/danvim/react-pdfmake-reconciler">
                 <GitHub size="1em" style={{ verticalAlign: "text-bottom" }} />{" "}
                 danvim/react-pdfmake-reconciler
@@ -210,6 +211,19 @@ const App: FC = () => (
       </Box>
     </Section>
 
+    {/*<Box*/}
+    {/*  column*/}
+    {/*  style={{ alignItems: "end", justifyContent: "end", marginTop: "-2em" }}*/}
+    {/*>*/}
+    {/*  <Label>🡒 fluency</Label>*/}
+    {/*  <Box centerItems gap={5}>*/}
+    {/*    /!*<Legend $styleName="lesserStyle" />*!/*/}
+    {/*    <Legend $styleName="normalStyle" />*/}
+    {/*    <Legend $styleName="niceStyle" />*/}
+    {/*    <Legend $styleName="perfectStyle" />*/}
+    {/*  </Box>*/}
+    {/*</Box>*/}
+
     <Section title="Education">
       <Entry dated="2016-2020">
         <Box column>
@@ -233,18 +247,22 @@ const App: FC = () => (
       </div>
       <div>
         <strong style={{ width: 200, display: "inline-block" }}>
-          GitHub page ∙ profile
+          Personal website
         </strong>
-        <a href="https://danvim.github.io">https://danvim.github.io</a>
-        {" ∙ "}
+        <a href="https://danvim.github.io">https://danv.im</a>
+      </div>
+      <div>
+        <strong style={{ width: 200, display: "inline-block" }}>
+          GitHub profile
+        </strong>
         <a href="https://github.com/danvim/">https://github.com/danvim/</a>
       </div>
       <div>
         <strong style={{ width: 200, display: "inline-block" }}>
           LinkedIn
         </strong>
-        <a href="https://www.linkedin.com/in/-daniel-cheung/">
-          https://www.linkedin.com/in/-daniel-cheung/
+        <a href="https://www.linkedin.com/in/-daniel-cheung">
+          https://www.linkedin.com/in/-daniel-cheung
         </a>
       </div>
     </Section>
